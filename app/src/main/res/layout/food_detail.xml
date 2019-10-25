@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="98dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:background="#E91E63"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="64dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodDesc"
+            android:layout_width="408dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="132dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodPrice"
+            android:layout_width="165dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodDesc" />
+
+        <Button
+            android:id="@+id/quantityMinus"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:onClick="minusQuantity"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@+id/foodPrice"
+            app:layout_constraintTop_toBottomOf="@+id/foodDesc" />
+
+        <Button
+            android:id="@+id/quantityPlus"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:onClick="addQuantity"
+            android:text="+"
+            app:layout_constraintStart_toEndOf="@+id/quantity"
+            app:layout_constraintTop_toBottomOf="@+id/foodDesc" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/quantityMinus"
+            app:layout_constraintTop_toBottomOf="@+id/foodDesc" />
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="129dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="orderFood"
+            android:text="Add to Order"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
